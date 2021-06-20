@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    {{ count1 }}
-    {{ count2 }}
+    <div>{{ doneTodoCount }}</div>
   </div>
 </template>
 
@@ -12,9 +11,11 @@ export default {
   name: 'App',
   computed: {
     ...mapState([
-      "count1",
-      "count2"
-    ])
+      "todos"
+    ]),
+    doneTodoCount () {
+      return this.$store.getters.doneTodoCount
+    }
   }
 }
 </script>

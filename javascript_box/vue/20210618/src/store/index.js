@@ -5,8 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    count1: 1,
-    count2: 2
+    todos: [
+      { id: 1, label: 'a', done: true },
+      { id: 2, label: 'a', done: false }
+    ]
+  },
+  getters: {
+    doneTodoCount: (state) => {
+      return state.todos.filter(todo => todo.done).length
+    }
   },
   mutations: {
   },
