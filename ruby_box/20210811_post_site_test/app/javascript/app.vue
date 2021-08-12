@@ -11,6 +11,7 @@ import VueRouter from 'vue-router'
 import ArticleIndex from 'ArticleIndex.vue'
 import ArticleDetail from 'ArticleDetail.vue'
 import ArticleNew from 'ArticleNew.vue'
+import Login from 'Login.vue'
 
 const router = new VueRouter({
   routes: [
@@ -27,7 +28,12 @@ const router = new VueRouter({
       path: '/articles/new',
       name: 'article_new',
       component: ArticleNew
-    }
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
   ]
 })
 

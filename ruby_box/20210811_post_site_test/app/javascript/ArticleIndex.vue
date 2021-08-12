@@ -27,11 +27,38 @@ export default {
       articles: []
     }
   },
-  mounted () {
-    axios
+  async mounted () {
+    await this.getAccountData();
+
+    await axios
       .get('/api/v1/articles.json')
       .then(response => (this.articles = response.data))
-  }
+  },
+  methods: {
+    async getAccountData() {
+
+      const result = await axios.get("/api/v1/account").catch((e) => {
+        console.error(e);
+      });
+
+      if (!result) {
+        // エラーの場合ログイン画面へ遷移させる
+        this.redirectLogin();
+        return;
+      }
+      if (!result.data.email) {
+        // エラーの場合ログイン画面へ遷移させる
+        this.redirectLogin();
+        return;
+      }
+
+      this.email = result.data.email;
+    },
+    redirectLogin() {
+      //ページ遷移
+      this.$router.push("/login");
+    },
+  },
 }
 </script>
 
