@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 参考
 
-Things you may want to cover:
+devise-token-auth
+https://qiita.com/kk-icare/items/c4cd040824c7d6b434d6
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ActionController::InvalidAuthenticityToken
+https://off.tokyo/blog/rails-post-invalidauthenticitytoken/#ActionControllerInvalidAuthenticityToken_in_PlansControllersrc2
