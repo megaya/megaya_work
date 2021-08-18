@@ -1,5 +1,16 @@
 # 20210819_nuxt_firebase_test
 
+## 参考
+
+Nuxt.js + Firebase Authentication + FireStoreでwebアプリケーションハンズ
+
+https://zenn.dev/ririli47/articles/f8d12ad890ca4d9c615b
+
+
+401がでた
+
+https://haayaaa.hatenablog.com/entry/2019/05/04/180633
+
 ## Build Setup
 
 ```bash
