@@ -11,6 +11,13 @@ https://zenn.dev/ririli47/articles/f8d12ad890ca4d9c615b
 
 https://haayaaa.hatenablog.com/entry/2019/05/04/180633
 
+
+Nuxt.js+Firebaseの認証・認可を実装した雛形プロジェクトを公開しました
+https://qiita.com/Yuta_Fujiwara/items/3c57c99399891ae3ff38
+
+ちょっとでもセキュリティに自信がないなら、 Firebase Authentication を検討しよう
+https://mizchi.dev/202008172159-firebase-authentication
+
 ## Build Setup
 
 ```bash

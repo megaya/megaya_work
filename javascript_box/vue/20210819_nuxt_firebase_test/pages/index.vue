@@ -1,8 +1,22 @@
 <template>
   <div class="container">
+    <div>
       <button class="button is-primary is-rounded" @click="login">
         ログイン
       </button>
+    </div>
+
+    <div>
+      <button class="button is-primary is-rounded" @click="checkLogin">
+        ログイン確認
+      </button>
+    </div>
+
+    <div>
+      <button class="button is-primary is-rounded" @click="logout">
+        ログアウト
+      </button>
+    </div>
   </div>
 </template>
 
@@ -12,7 +26,14 @@ export default {
     login() {
       console.log('login')
       this.$store.dispatch('login')
-    }
+    },
+    async checkLogin() {
+      await this.$store.dispatch('isLogin')
+      console.log(this.$store.state)
+    },
+    logout() {
+      this.$store.dispatch('logout')
+    },
   }
 }
 </script>
