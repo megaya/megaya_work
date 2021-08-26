@@ -17,11 +17,29 @@
         ログアウト
       </button>
     </div>
+
+    <table class="table is-narrow">
+      <thead>
+        <tr>
+          <th>todo</th>
+          <th>limit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="todo in $store.getters.getTodos" :key="todo.id">
+          <td>{{todo.name}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
 <script>
 export default {
+  created() {
+    this.$store.dispatch('fetchTodos')
+  },
+
   methods: {
     login() {
       console.log('login')
@@ -33,6 +51,7 @@ export default {
     },
     logout() {
       this.$store.dispatch('logout')
+      console.log(this.$store.state)
     },
   }
 }
